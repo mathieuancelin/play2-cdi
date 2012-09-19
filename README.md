@@ -32,7 +32,7 @@ object ApplicationBuild extends Build {
 }
 ```
 
-You also need to add an empty (or not) `beans.xml` file in your Play 2 app. so Weld will be able to boot. Just create a `META-INF folder in the `conf` and create an empty `beans.xml` inside.
+You also need to add an empty (or not) `beans.xml` file in your Play 2 app. so Weld will be able to boot. Just create a `META-INF` folder in the `conf` and create an empty `beans.xml` inside.
  
 Then, you need to use dynamic controller dispatching in your application so Weld will be able to create the controller instances for you. To do that, just prefix your controller class name with the `@` symbol in the `routes` file :
 
