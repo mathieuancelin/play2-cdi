@@ -3,7 +3,7 @@ Using CDI within a Play 2.0 application
 
 This is a simple application demonstrating how to integrate a Play 2.0 application components with CDI (especially with  <a href="http://seamframework.org/Weld">JBoss Weld</a>).
 
-> This project is based on Guillaume Bort's work on <a href="https://github.com/guillaumebort/play20-spring-demo">how to integrate Spring in a Play2 application</a>. Thanks for the trick Guillaume :-)
+> This project is based on Guillaume Bort's work on <a href="https://github.com/guillaumebort/play20-spring-demo">how to integrate Spring in a Play2 application</a>. Thanks for the tip Guillaume :-)
 > This project use Play 2.1 wich includes dynamic controller dispatching
 
 ## How to make it work
