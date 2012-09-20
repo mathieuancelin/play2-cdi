@@ -3,5 +3,32 @@
 @main("Yeah") {
     
     <h1>@message</h1>
+
+    <form id="filter">
+        Message: <input type="text" value="" id="message">
+        <input type="submit" value="Send">
+    </form>
+
+    <div id="events"></div>
+    
+    <script type="text/javascript" charset="utf-8">        
+
+        $(window).ready(function() {
+
+        	var feed = new EventSource('@routes.StreamController.stream()')
+
+            feed.onmessage = function(e) {
+                var data = JSON.parse(e.data)
+                $('#events').prepend("<p>" + data.message + "</p>")
+            }
+
+	        $('#filter').submit( function(e) {
+	            e.preventDefault()
+	            $.post('@routes.Application.sendMessage()', {message: $('#message').val()})
+	        })
+
+        })
+        
+    </script>
     
 }
